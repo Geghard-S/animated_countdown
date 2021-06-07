@@ -33,24 +33,26 @@ h4{
 
 @keyframes hide {
     0% {
-        transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, -50%) scale(1);
     }
+  
     100% {
-        transform: translate(-50%, -50%) scale(0);
+      transform: translate(-50%, -50%) scale(0);
     }
-}
-
-.final{
+  }
+  
+  .final {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-}
-
-.final.show {
+    text-align: center;
+  }
+  
+  .final.show {
     transform: translate(-50%, -50%) scale(1);
     animation: show 0.2s ease-out;
-}
+  }
 
 @keyframes show {
     0% {
@@ -87,7 +89,6 @@ h4{
 }
 
 .nums span.out {
-    transform: translate(-50%, -50%) rotate(0deg);
     animation: goOut 0.5s ease-in-out;
 }
 
@@ -105,4 +106,16 @@ h4{
         transform: translate(-50%, -50%) rotate(0deg)
     }
 }
+
+@keyframes goOut {
+    0%{
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    60%{
+      transform: translate(-50%, -50%) rotate(20deg);
+    }
+    100%{
+      transform: translate(-50%, -50%) rotate(-120deg);
+    }
+  }
 
